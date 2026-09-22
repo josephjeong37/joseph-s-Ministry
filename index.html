@@ -123,6 +123,22 @@ body{height:auto;font-family:'Malgun Gothic',sans-serif}.card{padding-top:30px}.
 </style><style>
 body{padding-top:28px}.card{padding:24px 24px 22px}.cat{margin:0 0 12px}.portrait{width:132px;height:166px;margin:12px auto 16px;border-radius:22px}.portrait img{width:336.36px;left:-14.64px;top:-15.6px}h1{font-size:25px}.english{margin-top:5px;font-size:10px}.role{margin-top:10px;font-size:14px}.tagline{margin-top:10px;font-size:13px}.rule{margin:18px 0 14px}.quick .orb{width:56px;height:56px}.quick{gap:30px}.quick .lb{margin-top:3px}.brand-logo{width:126px;height:auto;margin:24px auto 0}.footer{margin-top:10px;font-size:10px}.cta{margin-top:16px;padding:14px;font-size:14px}.detail-menu{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.detail-menu button{font:inherit;cursor:pointer;border:1px solid var(--bg-panel);border-radius:15px;background:white;padding:8px 3px 11px;color:var(--ink)}.detail-menu button:hover,.detail-menu button.active{border-color:var(--primary-blue);box-shadow:0 5px 15px #2f73f218}.detail-menu button:focus-visible,#close-details:focus-visible{outline:3px solid var(--primary-blue);outline-offset:3px}.menu-icon{display:block;width:62px;height:62px;background-image:url('menu-icons-3d.png');background-size:300% 100%;margin:0 auto 5px}.menu-about{background-position:0% 50%}.menu-ministry{background-position:50% 50%}.menu-vision{background-position:100% 50%}.detail-menu strong{display:block;font-size:12px}.detail-menu small{display:block;font-size:10px;color:var(--ink-tertiary);margin-top:4px}.menu-hint{font-size:10px;color:var(--ink-tertiary);margin:10px 0 0}dialog{border:1px solid var(--bg-panel);border-radius:24px;padding:24px;width:calc(100% - 32px);max-width:440px;max-height:85dvh;overflow:auto;color:var(--ink);box-shadow:0 24px 80px #101a3d33}dialog::backdrop{background:#101a3d77;backdrop-filter:blur(4px)}.detail-header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:20px}.detail-header h2{margin:0;font-size:21px}.detail-header button{border:0;border-radius:10px;padding:10px 14px;background:var(--bg-page);color:var(--primary-blue-deep);font:inherit;cursor:pointer}#detail-body .bio:last-child{margin-bottom:0}body:has(dialog[open]){overflow:hidden}
 @media(max-width:360px){.card{padding:22px 16px}.quick{gap:22px}.menu-icon{width:54px;height:54px}}
+</style><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<style id="readable-typography">
+:root{--ink:#101a33;--ink-secondary:#334155;--ink-tertiary:#475569}
+body,button,dialog{font-family:'Pretendard',-apple-system,BlinkMacSystemFont,'Segoe UI','Malgun Gothic',sans-serif;letter-spacing:-.025em}
+h1{font-size:30px;font-weight:800;letter-spacing:-.045em;line-height:1.3}
+.cat{font-size:13px;font-weight:700;color:#2855a6}.english{font-size:12px;font-weight:600;color:#475569;letter-spacing:.15em}
+.role{font-size:16px;font-weight:700;line-height:1.65;color:#2855a6}
+.tagline{font-size:16px;font-weight:500;line-height:1.75;color:#334155;word-break:keep-all}
+address{font-size:14px!important;font-weight:500;line-height:1.9!important}
+.quick .lb{font-size:14px;font-weight:700;color:#334155}
+.detail-menu strong{font-size:14px;font-weight:750;color:#17243c}.detail-menu small{font-size:12px;font-weight:500;color:#475569;line-height:1.5}
+.menu-hint{font-size:12px;font-weight:500;color:#475569;line-height:1.6}
+.cta{font-size:15px;font-weight:700}.footer{font-size:12px;font-weight:500;color:#475569;line-height:1.75}
+.bio-h{font-size:15px;font-weight:750;color:#2855a6}.bio-tx{font-size:16px;font-weight:500;color:#334155;line-height:1.8}
+.ministries li{font-size:15px;font-weight:500;color:#334155;line-height:1.8}.ministries strong{font-size:16px;font-weight:750;color:#174a91}
+.keywords span{font-size:13px;font-weight:600;color:#174a91}.detail-header h2{font-size:23px;font-weight:800}.detail-header button{font-size:14px;font-weight:650}
 </style></head><body><main class="page"><div class="frame"><article class="card">
 <p class="cat">말씀 · 교육 · 다음세대</p>
 <div class="portrait"><img src="profile-source.png" alt="정은찬 목사 프로필 사진"></div>
@@ -154,5 +170,6 @@ document.getElementById('close-details').addEventListener('click',()=>dialog.clo
 dialog.addEventListener('click',event=>{if(event.target===dialog){const box=dialog.getBoundingClientRect();if(event.clientX<box.left||event.clientX>box.right||event.clientY<box.top||event.clientY>box.bottom)dialog.close();}});
 dialog.addEventListener('close',()=>{if(activeMenu){activeMenu.classList.remove('active');activeMenu.focus();}});
 </script></body></html>
+
 
 
