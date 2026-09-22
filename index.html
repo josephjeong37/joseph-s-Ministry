@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>정은찬 목사 · Joseph | 프로필 명함</title>
+<style>
+  /* ===== eum_웹토큰_v1 (블루 미니멀 3D 카드형 디자인 시스템) — 파일럿 적용 =====
+     정본: D:\HONG\09_이음\01_부서\경영조정실\_디자인시스템\eum_웹토큰_v1.css (동일 값, 값 동기화 유지)
+     빌드 단계가 없는 정적 GitHub Pages 사이트라 외부 D:\ 경로 링크 대신 값을 인라인함. */
+  :root{
+    /* TIER1 PRIMITIVES */
+    --p-blue-main:#2F73F2; --p-blue-main-rgb:47,115,242;
+    --p-blue-deep:#1F5FD9; --p-blue-deep-rgb:31,95,217;
+    --p-blue-light:#6FA7FF; --p-blue-light-rgb:111,167,255;
+    --p-bg-white:#FFFFFF; --p-bg-gray-light:#F5F7FA; --p-bg-blue-pale:#EAF3FF; --p-bg-blue-panel:#DDEEFF;
+    --p-ink-900:#101A3D; --p-ink-700:#3A4568; --p-ink-500:#5C6A93;
+    --p-state-disabled-ink:#A7B2CE; --p-state-disabled-bg:#F3F6FC;
+    /* TIER2 SEMANTICS (전부 위 primitives 참조, 리터럴 없음) */
+    --primary-blue:var(--p-blue-main); --primary-blue-deep:var(--p-blue-deep); --primary-blue-light:var(--p-blue-light);
+    --primary-blue-rgb:var(--p-blue-main-rgb); --primary-blue-deep-rgb:var(--p-blue-deep-rgb);
+    --bg-page:var(--p-bg-blue-pale); --bg-surface:var(--p-bg-white); --bg-surface-muted:var(--p-bg-gray-light); --bg-panel:var(--p-bg-blue-panel);
+    --ink:var(--p-ink-900); --ink-secondary:var(--p-ink-700); --ink-tertiary:var(--p-ink-500); --ink-on-blue:var(--p-bg-white);
+    --state-disabled-ink:var(--p-state-disabled-ink); --state-disabled-bg:var(--p-state-disabled-bg);
+    --shadow-frame:0 30px 60px -26px rgba(var(--primary-blue-deep-rgb),.35);
+    --shadow-cta:0 14px 26px -12px rgba(var(--primary-blue-rgb),.5);
+    --shadow-soft:0 18px 30px rgba(var(--primary-blue-deep-rgb),.28);
+    --shadow-orb-inset: inset -5px -7px 12px rgba(var(--primary-blue-deep-rgb),.30), inset 3px 4px 7px rgba(255,255,255,.95), 0 12px 20px -8px rgba(var(--primary-blue-rgb),.5);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0; min-height:100%; font-family:var(--font-family-base,'Pretendard'),-apple-system,sans-serif;
+    background:linear-gradient(180deg,var(--bg-panel) 0%,var(--bg-page) 45%,var(--bg-surface) 100%);
+    display:flex; justify-content:center; padding:56px 20px 70px; overflow-x:hidden;
+  }
+
+  .page{ width:100%; max-width:420px; position:relative; }
+
+  /* 구름 */
+  .cloud{ position:fixed; z-index:-1; opacity:.8; filter:blur(.3px); }
+  .cloud svg{ display:block; }
+  .c1{ top:6%; left:-6%; width:180px; animation:cdrift 26s ease-in-out infinite; }
+  .c2{ top:16%; right:-8%; width:150px; animation:cdrift 30s ease-in-out infinite reverse; }
+  .c3{ bottom:10%; left:-4%; width:130px; animation:cdrift 22s ease-in-out infinite; }
+  @keyframes cdrift{ 0%,100%{transform:translateX(0)} 50%{transform:translateX(18px)} }
+  @media (prefers-reduced-motion: reduce){ .cloud{animation:none} }
+
+  /* 테두리 프레임 — 정본 §3 컬러 규칙 "무지개색 금지" 반영, 블루 톤 그라데이션으로 전면 교체 */
+  .frame{
+    border-radius:var(--radius-xl,32px); padding:3px;
+    /* ★오너 직접 지시(2026-09-01): 무지개 테두리는 의도된 디자인 포인트 — Phase 1의 블루 교체를
+       원상복귀. 이 규칙만 예외, 그 외 토큰화는 그대로 유지. */
+    background-image:linear-gradient(135deg, #FF9AD8, #FFD98C, #8CC7FF, #18DDEB, #B98CFF);
+    box-shadow:0 30px 60px -26px rgba(31,95,217,.35);
+  }
+  .card{ background:var(--bg-surface); border-radius:var(--radius-lg,29px); padding:38px 28px 28px; text-align:center; position:relative; overflow:hidden; }
+
+  .cat{ font-size:var(--font-size-label,12.5px); font-weight:700; color:var(--primary-blue-deep); letter-spacing:.03em; }
+
+  /* 천사 이미지 (실사진) */
+  .angel-wrap{ display:flex; justify-content:center; margin:18px 0 10px; position:relative; }
+  .angel-glow{
+    position:absolute; top:-10%; width:260px; height:260px; border-radius:50%;
+    background:radial-gradient(circle, rgba(255,246,214,.9), rgba(255,246,214,.25) 55%, transparent 75%);
+    filter:blur(2px); z-index:0;
+  }
+  .angel{ position:relative; z-index:1; width:220px; height:auto; display:block;
+    filter:drop-shadow(var(--shadow-soft));
+    animation:fly 4.5s ease-in-out infinite; }
+  @keyframes fly{ 0%,100%{ transform:translateY(0);} 50%{ transform:translateY(-14px);} }
+  @media (prefers-reduced-motion: reduce){ .angel{animation:none} }
+
+  h1{ margin:0; font-size:var(--font-size-title,26px); font-weight:var(--font-weight-title,800); letter-spacing:-.01em; color:var(--ink); }
+  .role{ margin:7px 0 0; font-size:var(--font-size-subtitle,14.5px); font-weight:600; color:var(--primary-blue-deep); }
+  .tagline{ margin:14px 0 0; font-size:var(--font-size-caption,13.5px); line-height:1.7; color:var(--ink-tertiary); }
+
+  .rule{ height:1px; background:var(--bg-panel); margin:24px 0 20px; }
+
+  .quick{ display:flex; gap:12px; justify-content:center; }
+  .quick .item{ display:flex; flex-direction:column; align-items:center; gap:8px; }
+  .quick a{ text-decoration:none; }
+  .quick .lb{ font-size:11.5px; font-weight:700; color:var(--ink); }
+  .orb{ position:relative; width:56px; height:56px; border-radius:var(--radius-full,50%); display:flex; align-items:center; justify-content:center;
+    background:radial-gradient(circle at 30% 26%, var(--bg-surface), var(--bg-page) 42%, var(--primary-blue-light) 76%, var(--primary-blue) 100%);
+    box-shadow: var(--shadow-orb-inset);
+    transition:transform .16s ease;
+  }
+  .orb::after{ content:""; position:absolute; top:14%; left:22%; width:32%; height:22%; border-radius:50%; background:rgba(255,255,255,.85); filter:blur(2.5px); }
+  .orb svg{ position:relative; z-index:1; width:24px; height:24px; }
+  .item a:hover .orb{ transform:translateY(-3px); }
+  .item a:focus-visible .orb{ outline:2px solid var(--primary-blue); outline-offset:2px; }
+
+  .bio{ text-align:left; margin-bottom:20px; }
+  .bio-h{ margin:0 0 6px; font-size:var(--font-size-small,11px); font-weight:700; color:var(--ink-tertiary); letter-spacing:.04em; }
+  .bio-tx{ margin:0; font-size:var(--font-size-body,14.5px); line-height:var(--line-height-body,1.65); color:var(--ink-secondary); }
+
+  .apps{ display:flex; flex-wrap:wrap; gap:8px; margin-bottom:20px; }
+  .app-chip{
+    flex:1; min-width:64px; display:flex; flex-direction:column; align-items:center; gap:5px;
+    text-align:center; text-decoration:none; color:var(--primary-blue-deep);
+    font-size:12px; font-weight:700; padding:12px 6px; border-radius:var(--radius-sm,12px);
+    border:1px solid var(--bg-panel); background:var(--bg-surface-muted); transition:transform .16s ease, border-color .16s ease;
+  }
+  .app-chip .aicon{ width:42px; height:42px; object-fit:cover; border-radius:8px; }
+  .app-chip small{ font-size:var(--font-size-micro,9.5px); font-weight:600; color:var(--primary-blue); }
+  .app-chip:hover{ transform:translateY(-2px); border-color:var(--primary-blue); }
+  .app-chip:focus-visible{ outline:2px solid var(--primary-blue); outline-offset:2px; }
+  .app-chip.disabled{ color:var(--state-disabled-ink); background:var(--state-disabled-bg); cursor:default; }
+  .app-chip.disabled small{ font-size:var(--font-size-micro,9.5px); font-weight:600; }
+
+  .cta{
+    display:flex; align-items:center; justify-content:center; gap:8px; width:100%; margin-top:22px;
+    padding:16px 18px; border:none; cursor:pointer; border-radius:var(--radius-md,16px);
+    font-family:inherit; font-size:15px; font-weight:700; color:var(--ink-on-blue);
+    background:linear-gradient(135deg,var(--primary-blue),var(--primary-blue-deep)); box-shadow:var(--shadow-cta);
+  }
+  .cta:hover{ transform:translateY(-2px); }
+  .made{ margin-top:18px; font-size:12px; color:var(--ink-tertiary); }
+</style>
+<style>
+body{height:auto;font-family:'Malgun Gothic',sans-serif}.card{padding-top:30px}.portrait{position:relative;width:220px;height:302px;overflow:hidden;border-radius:24px;margin:22px auto;box-shadow:0 14px 30px #1f5fd922}.portrait img{position:absolute;width:560.6px;max-width:none;height:auto;left:-24.4px;top:-26px}.english{font-size:12px;letter-spacing:.2em;color:var(--ink-tertiary);margin:8px 0 0}.role{line-height:1.7}.bio-h{font-size:12px;margin-bottom:10px}.bio-tx{font-size:14px;word-break:keep-all}.ministries{list-style:none;padding:0;margin:0;display:grid;gap:9px}.ministries li{border:1px solid var(--bg-panel);background:var(--bg-surface-muted);border-radius:12px;padding:13px 14px;font-size:13px;line-height:1.65;color:var(--ink-secondary)}.ministries strong{display:block;color:var(--primary-blue-deep);font-size:14px;margin-bottom:3px}.keywords{display:flex;flex-wrap:wrap;gap:7px}.keywords span{border-radius:20px;background:var(--bg-page);color:var(--primary-blue-deep);padding:7px 10px;font-size:12px}.mission{padding:16px;background:var(--bg-page);border-radius:14px}.footer{font-size:11px;line-height:1.8;color:var(--ink-tertiary);margin:23px 0 0}.cta{text-decoration:none} @media(max-width:460px){body{padding:24px 14px 40px}.card{padding:28px 22px}}@media print{body{background:white;padding:0}.frame{box-shadow:none}.cta{display:none}.page{max-width:480px}}
+</style><style>
+.brand-logo{display:block;width:250px;max-width:100%;height:auto;margin:0 auto 24px}
+.quick{gap:22px}.quick .orb{width:76px;height:76px;border-radius:15px;background-image:url('contact-icons-3d.png');background-size:300% 100%;background-repeat:no-repeat;box-shadow:none;background-color:#fff}.quick .orb::after{display:none}.quick .icon-phone{background-position:0% 50%}.quick .icon-message{background-position:50% 50%}.quick .icon-email{background-position:100% 50%}.quick .lb{display:block;margin-top:7px;font-size:12px}.quick a{display:block;border-radius:15px}.quick a:focus-visible{outline:2px solid var(--primary-blue);outline-offset:5px}
+@media(max-width:360px){.quick{gap:12px}.quick .orb{width:66px;height:66px}}
+</style><style>
+body{padding-top:28px}.card{padding:24px 24px 22px}.cat{margin:0 0 12px}.portrait{width:132px;height:166px;margin:12px auto 16px;border-radius:22px}.portrait img{width:336.36px;left:-14.64px;top:-15.6px}h1{font-size:25px}.english{margin-top:5px;font-size:10px}.role{margin-top:10px;font-size:14px}.tagline{margin-top:10px;font-size:13px}.rule{margin:18px 0 14px}.quick .orb{width:56px;height:56px}.quick{gap:30px}.quick .lb{margin-top:3px}.brand-logo{width:126px;height:auto;margin:24px auto 0}.footer{margin-top:10px;font-size:10px}.cta{margin-top:16px;padding:14px;font-size:14px}.detail-menu{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.detail-menu button{font:inherit;cursor:pointer;border:1px solid var(--bg-panel);border-radius:15px;background:white;padding:8px 3px 11px;color:var(--ink)}.detail-menu button:hover,.detail-menu button.active{border-color:var(--primary-blue);box-shadow:0 5px 15px #2f73f218}.detail-menu button:focus-visible,#close-details:focus-visible{outline:3px solid var(--primary-blue);outline-offset:3px}.menu-icon{display:block;width:62px;height:62px;background-image:url('menu-icons-3d.png');background-size:300% 100%;margin:0 auto 5px}.menu-about{background-position:0% 50%}.menu-ministry{background-position:50% 50%}.menu-vision{background-position:100% 50%}.detail-menu strong{display:block;font-size:12px}.detail-menu small{display:block;font-size:10px;color:var(--ink-tertiary);margin-top:4px}.menu-hint{font-size:10px;color:var(--ink-tertiary);margin:10px 0 0}dialog{border:1px solid var(--bg-panel);border-radius:24px;padding:24px;width:calc(100% - 32px);max-width:440px;max-height:85dvh;overflow:auto;color:var(--ink);box-shadow:0 24px 80px #101a3d33}dialog::backdrop{background:#101a3d77;backdrop-filter:blur(4px)}.detail-header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:20px}.detail-header h2{margin:0;font-size:21px}.detail-header button{border:0;border-radius:10px;padding:10px 14px;background:var(--bg-page);color:var(--primary-blue-deep);font:inherit;cursor:pointer}#detail-body .bio:last-child{margin-bottom:0}body:has(dialog[open]){overflow:hidden}
+@media(max-width:360px){.card{padding:22px 16px}.quick{gap:22px}.menu-icon{width:54px;height:54px}}
+</style></head><body><main class="page"><div class="frame"><article class="card">
+<p class="cat">말씀 · 교육 · 다음세대</p>
+<div class="portrait"><img src="profile-source.png" alt="정은찬 목사 프로필 사진"></div>
+<h1>정은찬 목사</h1><p class="english">JOSEPH</p>
+<p class="role">목회자 · 교육선교사</p>
+<p class="tagline">시드니에서 말씀과 교육으로<br>한 사람을 그리스도의 제자로 세웁니다.</p>
+<div class="rule"></div>
+<nav class="quick" aria-label="연락하기">
+<div class="item"><a href="tel:+61435762262"><div class="orb icon-phone" aria-hidden="true"></div><span class="lb">전화</span></a></div>
+<div class="item"><a href="sms:+61435762262"><div class="orb icon-message" aria-hidden="true"></div><span class="lb">문자</span></a></div>
+<div class="item"><a href="mailto:josephjeong37@gmail.com"><div class="orb icon-email" aria-hidden="true"></div><span class="lb">이메일</span></a></div>
+</nav>
+<address style="font-style:normal;font-size:13px;line-height:1.9;margin-top:16px;overflow-wrap:anywhere"><a style="color:var(--ink-secondary);text-decoration:none" href="tel:+61435762262">+61 435 762 262 (호주)</a><br><a style="color:var(--ink-secondary);text-decoration:none" href="mailto:josephjeong37@gmail.com">josephjeong37@gmail.com</a></address>
+<div class="rule"></div><nav class="detail-menu" aria-label="프로필 상세 메뉴">
+<button type="button" data-panel="about" aria-haspopup="dialog" aria-controls="details"><span class="menu-icon menu-about" aria-hidden="true"></span><strong>소개</strong><small>걸어온 길</small></button>
+<button type="button" data-panel="ministry" aria-haspopup="dialog" aria-controls="details"><span class="menu-icon menu-ministry" aria-hidden="true"></span><strong>주요 사역</strong><small>사역 분야</small></button>
+<button type="button" data-panel="vision" aria-haspopup="dialog" aria-controls="details"><span class="menu-icon menu-vision" aria-hidden="true"></span><strong>사역 방향</strong><small>비전과 가치</small></button>
+</nav><p class="menu-hint">아이콘을 누르면 자세히 보실 수 있습니다.</p>
+<button class="cta" type="button" id="save-contact">＋ 프로필 연락처 저장하기</button>
+<img class="brand-logo" src="sydney-hosanna-logo.png" alt="Sydney Hosanna 시드니 호산나"><p class="footer">Sydney Hosanna Mission<br>CEAM Christian Education as Mission</p>
+</article></div></main><dialog id="details" aria-labelledby="detail-title"><header class="detail-header"><h2 id="detail-title"></h2><button type="button" id="close-details" autofocus>닫기</button></header><div id="detail-body"></div></dialog>
+<script>
+document.getElementById('save-contact').addEventListener('click',()=>{const text=['BEGIN:VCARD','VERSION:3.0','N:정;은찬;;;','FN:정은찬 목사 (Joseph)','ORG:Sydney Hosanna Mission;CEAM Christian Education as Mission','TITLE:목회자 · 교육선교사','TEL;TYPE=CELL:+61435762262','EMAIL;TYPE=INTERNET:josephjeong37@gmail.com','NOTE:호주 시드니 기반. 기독교교육 기획 및 교회·기관 컨설팅.','END:VCARD'].join('\r\n');const url=URL.createObjectURL(new Blob(['\uFEFF',text],{type:'text/vcard;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download='정은찬-Joseph.vcf';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);});
+</script><script>
+const detailData={"about":{"title":"소개","html":"<section class=\"bio\"><h2 class=\"bio-h\">소개</h2><p class=\"bio-tx\">목회자 · 교육선교사 · 기독교교육 기획자 · 교회·기관 컨설턴트<br><br>약 25년 동안 교회, 학교, 가정, 선교 현장에서 한 사람을 예수 그리스도의 제자로 세우는 일에 힘써 왔습니다.<br><br>말씀과 기독교교육을 중심으로 다음세대, 부모, 교사, 리더, 선교사를 세우는 사역을 감당하고 있습니다.</p></section>"},"ministry":{"title":"주요 사역","html":"<section class=\"bio\"><h2 class=\"bio-h\">주요 사역</h2><ul class=\"ministries\">\n<li><strong>말씀사역과 제자훈련</strong>성경강해, 설교, 제자양육, 영적 형성</li>\n<li><strong>기독교교육과 교육과정 설계</strong>성경적 세계관, 제자훈련, 맞춤형 커리큘럼 개발</li>\n<li><strong>교회·기관 컨설팅</strong>교회교육, 조직 진단, 리더십 훈련, 사역 시스템 설계</li>\n<li><strong>다음세대와 가정 사역</strong>부모교육, 청소년·청년 멘토링, 교사훈련</li>\n<li><strong>선교와 글로벌 사역</strong>케냐, 캄보디아, 태국, 조지아 등 현지 사역자와 리더 훈련</li>\n<li><strong>연구·집필·콘텐츠 개발</strong>교재, 워크북, 전자책, 강의자료, 제자훈련 리소스 제작</li>\n</ul></section>"},"vision":{"title":"사역 방향","html":"<section class=\"bio\"><h2 class=\"bio-h\">사역의 방향</h2><p class=\"bio-tx mission\">한 사람을 말씀 위에 세우고, 가정과 교회와 학교를 건강하게 세우며, 하나님 나라를 위해 다음세대를 준비시킵니다.<br><br>“요셉처럼 하나님과 동행하고, 바나바처럼 사람을 세우는 삶”을 지향합니다.</p></section><section class=\"bio\"><h2 class=\"bio-h\">핵심 키워드</h2><div class=\"keywords\"><span>제자훈련</span><span>기독교교육</span><span>말씀사역</span><span>부모교육</span><span>리더십</span><span>선교</span><span>다음세대</span><span>영적 형성</span></div></section>"}};
+const dialog=document.getElementById('details');let activeMenu=null;
+document.querySelectorAll('[data-panel]').forEach(button=>button.addEventListener('click',()=>{const detail=detailData[button.dataset.panel];document.getElementById('detail-title').textContent=detail.title;document.getElementById('detail-body').innerHTML=detail.html;activeMenu=button;button.classList.add('active');dialog.showModal();dialog.scrollTop=0;}));
+document.getElementById('close-details').addEventListener('click',()=>dialog.close());
+dialog.addEventListener('click',event=>{if(event.target===dialog){const box=dialog.getBoundingClientRect();if(event.clientX<box.left||event.clientX>box.right||event.clientY<box.top||event.clientY>box.bottom)dialog.close();}});
+dialog.addEventListener('close',()=>{if(activeMenu){activeMenu.classList.remove('active');activeMenu.focus();}});
+</script></body></html>
+
+
